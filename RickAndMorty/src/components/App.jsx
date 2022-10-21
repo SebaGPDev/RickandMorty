@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Card } from "./Card";
 function App() {
   const [characters, setcharacters] = useState([]);
   const initialUrl = "https://rickandmortyapi.com/api/character";
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="mt-5 container">
-      <h3>Hola</h3>
+      <Card characters={characters}/>
     </div>
   );
 }

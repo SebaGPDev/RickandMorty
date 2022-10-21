@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar(props) {
   const { brand } = props;
   return (
-    <nav className="navbar navbar-expand-sm bg-dark">
+    <nav className="navbar navbar-expand-sm bg-primary">
       <div className="container">
         <a className="navbar-brand" href="/">
           <h1 className="text-white">{brand}</h1>

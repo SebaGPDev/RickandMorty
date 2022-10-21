@@ -5,7 +5,7 @@ export const Card = ({ characters = [] }) => {
     <div className="row">
       {characters.map((item, index) => (
         <div key={index} className="col mb-4">
-          <div className="card">
+          <div className="card p-3">
             <img src={item.image} alt="" style={{ minWidth: "200px" }} />
             <div className="card-body">
               <div className="card-title">{item.name}</div>

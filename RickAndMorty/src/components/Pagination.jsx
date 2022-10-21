@@ -1,15 +1,31 @@
 import React from "react";
 
-export default function Pagination() {
+export default function Pagination(props) {
+  const { prev, next, onPrevious, onNext } = props;
+  const handlePrevious = () => {
+    onPrevious();
+  };
+
+  const handleNext = () => {
+    onNext();
+  };
   return (
-    <nav>
+    <nav className="m-5">
       <ul className="pagination justify-content-center">
-        <li className="page-item">
-          <button className="page-link">Previous</button>
-        </li>
-        <li className="page-item">
-          <button className="page-link">Next</button>
-        </li>
+        {prev ? (
+          <li className="page-item m-2">
+            <button className="page-link" onClick={handlePrevious}>
+              Previous
+            </button>
+          </li>
+        ) : null}
+        {next ? (
+          <li className="page-item m-2">
+            <button className="page-link" onClick={handleNext}>
+              Next
+            </button>
+          </li>
+        ) : null}
       </ul>
     </nav>
   );

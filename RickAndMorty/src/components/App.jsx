@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
+import Navbar from "./Navbar";
 function App() {
   const [characters, setcharacters] = useState([]);
   const initialUrl = "https://rickandmortyapi.com/api/character";
@@ -25,9 +26,12 @@ function App() {
   }, []);
 
   return (
-    <div className="mt-5 container">
-      <Card characters={characters}/>
-    </div>
+    <>
+      <Navbar brand="Rick and Morty" />
+      <div className="mt-5 container">
+        <Card characters={characters} />
+      </div>
+    </>
   );
 }
 
